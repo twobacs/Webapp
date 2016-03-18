@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="AUTHOR" CONTENT="david nuttin">
+	<META NAME="CREATED" CONTENT="20120307;13594985">
+	<META NAME="CHANGEDBY" CONTENT="david nuttin">
+	<META NAME="CHANGED" CONTENT="20120307;16501975">
+	<META NAME="CHANGEDBY" CONTENT="david nuttin">
+	<META NAME="CHANGEDBY" CONTENT="david nuttin">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><U><FONT SIZE=6><B>WEBAPP</B></U></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">The goal of the WebApp Class is
+to harmonize working ways of each developers. </FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">It is working with the MVC
+(model,view,controller) model.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">Each call to the website is done
+via a parameter in the url called &laquo;&nbsp;component&nbsp;&raquo;.
+This means the name of the &laquo;&nbsp;controller&nbsp;&raquo; . </FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN STYLE="font-weight: normal">ex&nbsp;:
+<A HREF="http://www.website.com/index.php?component=hello&amp;action=world">http://www.website.com/index.php?component=hello&amp;action=world</A></SPAN></FONT></SPAN></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">When the controller is loaded,
+he create the &laquo;&nbsp;model&nbsp;&raquo; and the &laquo;&nbsp;view&nbsp;&raquo;.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">The &ldquo;model&rdquo; is where
+you implement the access to the data (database, XML files, web
+services, etc...)</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 16pt">The &ldquo;View&rdquo; is where
+you set the result of the model in a Visual result (HTML, XML, JSON,
+etc...).</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><IMG SRC="?component=webappdoc&amp;action=getimg&amp;img=mvc.jpg" NAME="images1" ALIGN=LEFT WIDTH=643 HEIGHT=389 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Main
+Process :</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">WEBAPP
+	create </FONT>
+	</P>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load
+			&ldquo;main.conf.php&rdquo; file.</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load
+			&ldquo;main.php&rdquo; langage file (languages Dir).</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Set
+			the request parameters in the property &ldquo;UrlVars&rdquo;.</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Set
+			component and action names in properties.  ($this-&gt;component,
+			$this-&gt;action).</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Call
+			the checkBrowser method if it is configured.</FONT></P>
+			<P ALIGN=LEFT STYLE="margin-bottom: 0cm"> 
+			</P>
+		</UL>
+	</UL>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">WEBAPP
+	method &ldquo;execute&rdquo; called.</FONT></P>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Check
+			locally (website component Dir) if a component exist. If not,
+			check it globally (WEBAPP &ldquo;component&rdquo; Dir). If not ,
+			the default one set in configuration file is used.</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<UL>
+	<UL>
+		<UL>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">LoadMainMenu
+			method called.</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">LoadComponent
+			method called.</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">LoadActionMenu
+			method called.</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">LoadModules
+			method.</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">WEBAPP
+	method &ldquo;loadtemplate&rdquo; called. </FONT>
+	</P>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Switch
+			on ModeRespone (template,rest (XML),onlybody)</FONT></P>
+			<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Template
+			case</FONT></P>
+			<UL>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load/add
+				component/action &ldquo;js&rdquo; code found in template &ldquo;js&rdquo;
+				directory in $this-&gt;jsCode propertie.</FONT></P>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load/add
+				component/action &ldquo;js&rdquo; code found in site &ldquo;js&rdquo;
+				directory in $this-&gt;head propertie as a Filelink ('&lt;script
+				type=&quot;text/javascript&quot; src=&quot;' . $cSiteJsFile .
+				'&quot;&gt;&lt;/script&gt;') .</FONT></P>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load/add
+				component/action &ldquo;CSS&rdquo; code found in template &ldquo;CSS&rdquo;
+				directory in $this-&gt;cssCode propertie.</FONT></P>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Load/add
+				component/action &ldquo;CSS&rdquo; code found in site &ldquo;CSS&rdquo;
+				directory in $this-&gt;cssCode propertie.</FONT></P>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">Set
+				in $this-&gt;head propertie links to css and js files found
+				arrays $this-&gt;jsFiles and $this-&gt;cssFiles</FONT></P>
+				<LI><P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=4 STYLE="font-size: 16pt">If
+				file exists, include template index file.</FONT></P>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm">	</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

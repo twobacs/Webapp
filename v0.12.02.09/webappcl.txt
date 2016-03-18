@@ -1,0 +1,23 @@
+**** 2011.05.04
+Changement du nom de la classe webapp
+split dossier mvc vers model view controller
+domain vers component
+
+**** 2011.08
+ajout systeme module (encore perfectible)
+	Un module est un ptit bout de code (ex un formulaire de login) qui peut s'afficher dans les parties extérieures du template
+	
+
+ajout systeme langue ($this->dico ) (chargement automatique de fichiers de langue)
+
+correction du chargement automatiques des fichiers .conf.php des composants.
+ajout du chargement auto d'un fichier langue par composant
+ajout du chargement d'un fichier main language
+
+ajout methode redirect dans l'application
+
+
+
+
+
+
